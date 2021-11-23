@@ -97,12 +97,6 @@ Notifications.configure = function(options) {
 
     if (options.popInitialNotification === undefined || options.popInitialNotification === true) {
       this.popInitialNotification(function(firstNotification) {
-        if(this.isPopInitialNotification) {
-          return;
-        }
-        
-        this.isPopInitialNotification = true;
-        
         if (!firstNotification || false === firstNotification.userInteraction) {
           return;
         }
